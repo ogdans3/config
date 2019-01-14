@@ -27,6 +27,7 @@ noremap <right> <nop>
 noremap <up>    <nop>
 noremap <down>  <nop>
 nnoremap <CR> i<CR><ESC>
+noremap <leader>r <Esc>:syntax sync fromstart<CR>
 
 nnoremap <C-c> yy :call ClipboardYank()<CR>
 nnoremap <C-v> :call ClipboardPaste()<CR>p
@@ -35,8 +36,6 @@ inoremap <left>  <nop>
 inoremap <right> <nop>
 inoremap <up>    <nop>
 inoremap <down>  <nop>
-
-
 
 
 set hidden
@@ -91,6 +90,7 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_refresh_always = 1
 let deoplete#num_processes = 1
 set completeopt=menu,noinsert
+let NERDTreeShowHidden=1
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
