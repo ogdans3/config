@@ -16,6 +16,7 @@ let mapleader = " "
 :command Wq wq
 :command W w
 :command Q q
+:command Install :silent exe '!git config --global core.autocrlf input' | PlugInstall --sync | silent exe "!git config --global core.autocrlf true"<CR>
 
 nmap <Tab> >>
 nmap <S-Tab> <<
@@ -67,15 +68,17 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+let gitAutoCRLF = system('git config --global core.autocrlf')
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'mxw/vim-jsx'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
+Plug 'sheerun/vim-polyglot'
+Plug 'mxw/vim-jsx'
+Plug 'rakr/vim-one'
 call plug#end()
 
 
@@ -96,4 +99,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:used_javascript_libs = 'react,requirejs,chai,handlebards'
+
+colorscheme one
+set background=dark
 
