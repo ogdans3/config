@@ -23,23 +23,14 @@ nmap <S-Tab> <<
 vnoremap <Tab> >
 vnoremap <S-Tab> <
 
-noremap <left>  <nop>
-noremap <right> <nop>
-noremap <up>    <nop>
-noremap <down>  <nop>
 nnoremap <CR> i<CR><ESC>
 noremap <leader>r <Esc>:syntax sync fromstart<CR>
 
 nnoremap <C-c> yy :call ClipboardYank()<CR>
 nnoremap <C-v> :call ClipboardPaste()<CR>p
 
-inoremap <left>  <nop>
-inoremap <right> <nop>
-inoremap <up>    <nop>
-inoremap <down>  <nop>
-
-
 set hidden
+set modifiable
 nmap <leader>t :enew<cr>
 nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
@@ -74,11 +65,10 @@ Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'sheerun/vim-polyglot'
 Plug 'mxw/vim-jsx'
 Plug 'rakr/vim-one'
+Plug 'othree/javascript-libraries-syntax.vim'
 call plug#end()
 
 
