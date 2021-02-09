@@ -167,7 +167,7 @@ setenv OS_AUTH_URL https://nimbus.csail.mit.edu:5001/v2.0
 setenv OS_IMAGE_API_VERSION 1
 setenv OS_VOLUME_API_VERSION 2
 
-set -Up fish_user_paths $HOME/.cargo/bin $fish_user_paths
+# set -Up fish_user_paths $HOME/.cargo/bin $fish_user_paths
 
 function penv -d "Set up environment for the PDOS openstack service"
 	env OS_PASSWORD=(pass www/mit-openstack | head -n1) OS_TENANT_NAME=pdos OS_PROJECT_NAME=pdos $argv

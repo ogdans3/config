@@ -239,6 +239,7 @@ set listchars=nbsp:¬,extends:»,precedes:«,trail:•
 " ; as :
 nnoremap ; :
 
+
 " Ctrl+j and Ctrl+k as Esc
 " Ctrl-j is a little awkward unfortunately:
 " https://github.com/neovim/neovim/issues/5916
@@ -420,10 +421,6 @@ nnoremap <leader>q g<c-g>
 
 " Keymap for replacing up to next _ or -
 noremap <leader>m ct_
-
-" I can type :help on my own, thanks.
-map <F1> <Esc>
-imap <F1> <Esc>
 
 " =============================================================================
 " # Autocommands
