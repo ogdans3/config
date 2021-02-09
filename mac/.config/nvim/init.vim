@@ -33,6 +33,8 @@ Plug 'dart-lang/dart-vim-plugin'
 
 call plug#end()
 
+let g:rooter_patterns = ['.git']
+
 if has('nvim')
     set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
     set inccommand=nosplit
@@ -130,7 +132,7 @@ set updatetime=300
 let g:go_play_open_browser = 0
 let g:go_fmt_fail_silently = 1
 let g:go_fmt_command = "goimports"
-let g:go_bin_path = expand("~/dev/go/bin")
+let g:go_bin_path = expand("~/git/go/bin")
 
 " =============================================================================
 " # Editor settings
