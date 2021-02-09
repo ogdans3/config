@@ -15,6 +15,8 @@ abbr -a ks 'keybase chat send'
 abbr -a kr 'keybase chat read'
 abbr -a kl 'keybase chat list'
 abbr -a pr 'gh pr create -t (git show -s --format=%s HEAD) -b (git show -s --format=%B HEAD | tail -n+3)'
+
+alias vim="nvim"
 complete --command aurman --wraps pacman
 
 if status --is-interactive
