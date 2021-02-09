@@ -273,6 +273,18 @@ inoremap <C-f> :sus<cr>
 vnoremap <C-f> :sus<cr>
 nnoremap <C-f> :sus<cr>
 
+nnoremap <C-o> :E<cr>
+nnoremap <C-o> :E<cr>
+
+" Create new file in place
+function! CreateNewFileInPlace( name )
+	let base = expand("%:p:h")
+	let f = join([base,a:name], '/')
+	echo f
+	execute 'e' f
+endfunction
+command! -nargs=1 T call CreateNewFileInPlace(<q-args>)
+
 " Jump to start and end of line using the home row keys
 map H ^
 map L $
