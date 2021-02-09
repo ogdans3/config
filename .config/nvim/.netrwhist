@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/c/Users/gabriel.b-hansen/git/videocation/attraktor/attraktor-client'
-let g:netrw_dirhist_2='scp://ogdans3@frodo.freelunch.no/home/ogdans3/videocation/stripe-backend/'
-let g:netrw_dirhist_3='scp://ogdans3@frodo.freelunch.no/home/ogdans3/videocation/attraktor/stripe-backend/'
