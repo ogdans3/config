@@ -143,7 +143,7 @@ filetype plugin indent on
 set autoindent
 set timeoutlen=300 " http://stackoverflow.com/questions/2158516/delay-before-o-opens-a-new-line
 set encoding=utf-8
-set scrolloff=2
+set scrolloff=20
 set noshowmode
 set hidden
 set nowrap
@@ -180,6 +180,10 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set noexpandtab
+
+" Plug specific tab spaces
+let g:dart_style_guide = 4
+" let g:dart_format_on_save = 1
 
 " Wrapping options
 set formatoptions=tc " wrap text and comments using textwidth
@@ -406,7 +410,9 @@ nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 nnoremap <silent> <space>i  :call CocActionAsync('codeAction', '', 'Implement missing members')<cr>
 
 " Show actions available at this location
-nnoremap <silent> <space>a  :CocAction<cr>
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>ac  <Plug>(coc-codeaction)
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
