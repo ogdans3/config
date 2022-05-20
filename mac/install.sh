@@ -15,4 +15,5 @@ $HOME/.cargo/bin/cargo install proximity-sort
 cp -r .config ~/.config
 cp .tmux.conf ~/.tmux.conf
 cp .bashrc ~/.bashrc
+cp .zshrc ~/.zshrc
 
